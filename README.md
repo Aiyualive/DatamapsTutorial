@@ -9,6 +9,6 @@ To reproduce my results:
 
 **OBS** This only works for d3 v3.
 
-Using [https://datamaps.github.io/]: https://datamaps.github.io/
+Using [https://datamaps.github.io/]
 
-Inspired by [https://codepen.io/kairusann/pen/yJggMw]: https://codepen.io/kairusann/pen/yJggMw
+Inspired by [https://codepen.io/kairusann/pen/yJggMw]
