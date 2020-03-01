@@ -9,7 +9,7 @@ To reproduce my results:
 
 2. Open up the _world_map.html_ to interact with it.
 
-**OBS** This only works for d3 v3.
+**OBS**: This only works for d3 v3.
 
 Movie dataset: [https://data.world/data-society/imdb-5000-movie-dataset]
 
