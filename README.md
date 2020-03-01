@@ -7,7 +7,7 @@ To reproduce my results:
   <pre><code>python -m http.server 8080
 </code></pre>
 
-2. Open up the _world_map.html_ to interact with it.
+2. Open up the _world_map.html_ in your preferred browser to interact with it.
 
 **OBS**: This only works for d3 v3.
 
