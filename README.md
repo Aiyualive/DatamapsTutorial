@@ -1,6 +1,6 @@
 # Datamaps Tutorial
 
-_In this tutorial we aim to create an interactive world map that shows the movie-production counts upon country-specific mouse-hover. This is done using D3(v3)_
+_In this tutorial we aim to create an interactive world map that shows the movie-production counts upon country-specific mouse-hover. This is done using D3 (v3)._
 
 To reproduce my results:
 1. Setup a server on your local machine using python. In the src directory run:  
