@@ -1,4 +1,5 @@
 # Datamaps Tutorial
+In this tutorial we aim to create an interactive world map that shows the movie-production counts upon country-specific mouse-hover.
 
 To reproduce my results:
 1. Setup a server on your local machine using python. In the src directory run:  
@@ -9,6 +10,8 @@ To reproduce my results:
 
 **OBS** This only works for d3 v3.
 
-Using [https://datamaps.github.io/]
+Movie dataset: [https://data.world/data-society/imdb-5000-movie-dataset]
 
-Inspired by [https://codepen.io/kairusann/pen/yJggMw]
+Using: [https://datamaps.github.io/]
+
+Inspired by: [https://codepen.io/kairusann/pen/yJggMw]
