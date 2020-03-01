@@ -68,9 +68,6 @@ var countries =[]
 var dict_counts = {}
 var dataset = {}
 
-// V3 - no then function Promises
-// https://data.world/data-society/imdb-5000-movie-dataset
-
 // Country iso 3 codes: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
 // Format:
 // { "USA": {numberOfThings: count, fillColor: #FFFFFF},
@@ -105,17 +102,16 @@ d3.csv("movie_data.csv", function(data){
     // Set the color scale
     var minValue = Math.min.apply(null, counts),
         maxValue = Math.max.apply(null, counts);
-    var paletteScale = d3.scale.linear()
+    var palette = d3.scale.linear()
         .domain([minValue, maxValue])
         .range(["#FFCCCB", "#8B0000"]); // Light red, dark red
 
-    Object.keys(dict_counts).forEach(function(key) {
-        //add country converter
-        var country_code = code_converter[key],
-            value =  dict_counts[key];
+    Object.keys(dict_counts).forEach(function(country_name) {
+        var country_code = code_converter[country_name],
+                   value = dict_counts[country_name];
         dataset[country_code] = {
             movieCount: value,
-            fillColor: paletteScale(value)
+            fillColor: palette(value)
         };
     });
 
