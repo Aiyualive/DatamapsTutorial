@@ -64,8 +64,9 @@ var code_converter = {
     'Philippines': 'PHL'
 }
 
+// Container variables
 var countries =[]
-var dict_counts = {}
+var dict_movie_counts = {}
 var dataset = {}
 
 // Country iso 3 codes: https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
@@ -83,7 +84,8 @@ d3.csv("movie_data.csv", function(data){
         else if (c == 'West Germany'){
             countries.push("Germany");
         }
-        else if (c != "" && c != "Official site" && c != "New Line" ){ // Filter out empty values
+        // Filter out unexpected values
+        else if (c != "" && c != "Official site" && c != "New Line" ){
             countries.push(c);
         }
     }
@@ -91,24 +93,25 @@ d3.csv("movie_data.csv", function(data){
     // Bincount of the countries
     for (var i = 0; i < countries.length; i++) {
         var country = countries[i];
-        dict_counts[country] = dict_counts[country] ? dict_counts[country] + 1 : 1;
+        dict_movie_counts[country] =
+            dict_movie_counts[country] ? dict_movie_counts[country] + 1 : 1;
     }
 
     // Get count for each country
-    var counts = Object.keys(dict_counts).map(function(key){
-        return dict_counts[key];
+    var counts = Object.keys(dict_movie_counts).map(function(key){
+        return dict_movie_counts[key];
     });
 
-    // Set the color scale
+    // Set the color palette
     var minValue = Math.min.apply(null, counts),
         maxValue = Math.max.apply(null, counts);
     var palette = d3.scale.linear()
         .domain([minValue, maxValue])
         .range(["#FFCCCB", "#8B0000"]); // Light red, dark red
 
-    Object.keys(dict_counts).forEach(function(country_name) {
+    Object.keys(dict_movie_counts).forEach(function(country_name) {
         var country_code = code_converter[country_name],
-                   value = dict_counts[country_name];
+                   value = dict_movie_counts[country_name];
         dataset[country_code] = {
             movieCount: value,
             fillColor: palette(value)
