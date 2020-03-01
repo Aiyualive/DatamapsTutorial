@@ -1,5 +1,6 @@
 # Datamaps Tutorial
-In this tutorial we aim to create an interactive world map that shows the movie-production counts upon country-specific mouse-hover.
+
+_In this tutorial we aim to create an interactive world map that shows the movie-production counts upon country-specific mouse-hover._
 
 To reproduce my results:
 1. Setup a server on your local machine using python. In the src directory run:  
