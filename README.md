@@ -15,4 +15,7 @@ Movie dataset: [https://data.world/data-society/imdb-5000-movie-dataset]
 
 Using: [https://datamaps.github.io/]
 
+Country ISO alpha 3 codes: [https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3]
+
 Inspired by: [https://codepen.io/kairusann/pen/yJggMw]
+
