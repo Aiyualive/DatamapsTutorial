@@ -1,7 +1,7 @@
 # Datamaps Tutorial
 
 To reproduce my results:
-1. Setup a server on your local machine using python. In the src directory run:
+1. Setup a server on your local machine using python. In the src directory run:  
   <pre><code>python -m http.server 8080
 </code></pre>
 
